@@ -29,19 +29,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span class="task-text">${task.text} <small>(Due: ${task.dueDate})</small></span>
                 <span class="priority ${task.priority}">${task.priority.charAt(0).toUpperCase() + task.priority.slice(1)}</span>
                 <div class="actions">
+                    <button class="edit-btn">Edit</button>
                     <button class="delete-btn">Delete</button>
                 </div>
             `;
 
             const checkbox = li.querySelector('.checkbox');
             const deleteBtn = li.querySelector('.delete-btn');
+            const editBtn = li.querySelector('.edit-btn');
+
             checkbox.addEventListener('click', () => {
                 task.completed = !task.completed;
                 renderTasks();
             });
+
             deleteBtn.addEventListener('click', () => {
                 tasks = tasks.filter(t => t.id !== task.id);
                 renderTasks();
+            });
+
+            editBtn.addEventListener('click', () => {
+                editTask(task);
             });
 
             li.addEventListener('dragstart', () => {
@@ -104,6 +112,23 @@ document.addEventListener('DOMContentLoaded', () => {
         filterPriority.addEventListener('change', renderTasks);
 
         searchElementsAdded = true;
+    }
+
+    function editTask(task) {
+        const newText = prompt('Edit task text:', task.text);
+        if (newText === null || newText.trim() === '') return;
+
+        const newDueDate = prompt('Edit due date (YYYY-MM-DD):', task.dueDate);
+        if (newDueDate === null || newDueDate.trim() === '') return;
+
+        const newPriority = prompt('Edit priority (low, medium, high):', task.priority);
+        if (newPriority === null || !['low', 'medium', 'high'].includes(newPriority.toLowerCase())) return;
+
+        task.text = newText;
+        task.dueDate = newDueDate;
+        task.priority = newPriority.toLowerCase();
+
+        renderTasks();
     }
 
     taskForm.addEventListener('submit', (e) => {
