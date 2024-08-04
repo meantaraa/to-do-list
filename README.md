@@ -19,7 +19,7 @@ A simple and elegant To-Do List application built with HTML, CSS, and JavaScript
 
 - HTML
 - CSS
-- JS
+- JavaScript
  
 # Contributing
 
