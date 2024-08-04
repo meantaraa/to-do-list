@@ -194,6 +194,11 @@ li .priority.high {
     background: #694F8E;
 }
 
+li .actions {
+    display: flex;
+    gap: 10px;
+}
+
 li .actions button {
     background: #4a306e;
     border: none;
@@ -207,6 +212,22 @@ li .actions button {
 
 li .actions button:hover {
     background: #331e51;
+}
+
+li .actions .edit-btn {
+    background: #8A2BE2;
+}
+
+li .actions .edit-btn:hover {
+    background: #7A1FA2;
+}
+
+li .actions .delete-btn {
+    background: #D32F2F; 
+}
+
+li .actions .delete-btn:hover {
+    background: #B71C1C; 
 }
 
 
