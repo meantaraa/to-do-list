@@ -4,9 +4,8 @@ A simple and elegant To-Do List application built with HTML, CSS, and JavaScript
 
 # Features
 
-- Add, edit, and delete tasks
-- Add and manage subtasks
-- Filter tasks by priority and completion status
+- Add and delete tasks
+- Filter tasks by priority status
 - Search tasks by text
 - Drag-and-drop to reorder tasks
 
