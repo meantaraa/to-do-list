@@ -10,21 +10,21 @@ A simple and elegant To-Do List application built with HTML, CSS, and JavaScript
 - Search tasks by text
 - Drag-and-drop to reorder tasks
 
-  # Getting Started
+# Getting Started
 
-  1. Clone the Repository: git clone https://github.com/meantaraa/to-do-list.git
-  2. Open the Application: Simply open index.html in your web browser.
+1. Clone the Repository: git clone https://github.com/meantaraa/to-do-list.git
+2. Open the Application: Simply open index.html in your web browser.
  
-  # Technologies Used
+# Technologies Used
 
-  - HTML
-  - CSS
-  - JS
+- HTML
+- CSS
+- JS
  
-  # Contributing
+# Contributing
 
-  Feel free to open issues or submit pull requests. Contributions are welcome!
+Feel free to open issues or submit pull requests. Contributions are welcome!
 
-  # License
+# License
 
-  This project is licensed under the MIT License.
+This project is licensed under the MIT License.
