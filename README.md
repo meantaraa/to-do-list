@@ -24,6 +24,3 @@ A simple and elegant To-Do List application built with HTML, CSS, and JavaScript
 
 Feel free to open issues or submit pull requests. Contributions are welcome!
 
-# License
-
-This project is licensed under the MIT License.
