@@ -1,0 +1,221 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #B692C2, #694F8E);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #FFDFD6;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="date"], select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+input[type="date"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(182, 146, 194, 0.5);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: transparent;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-clear-button {
+    display: none;
+}
+
+input[type="date"]:hover {
+    border-color: #E3A5C7;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background: #E3A5C7;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #694F8E;
+}
+
+#search, #filterPriority {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 6px;
+    margin-bottom: 10px;
+    transition: background 0.3s, transform 0.3s;
+    position: relative;
+    padding-left: 40px;
+}
+
+li.dragging {
+    opacity: 0.5;
+}
+
+li.completed .task-text {
+    color: #FFDFD6; 
+    text-decoration: line-through; 
+}
+
+li.completed::before {
+    content: '\2713';
+    color: #B692C2;
+    font-size: 1.2em;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+li .checkbox {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #B692C2;
+    background: #fff;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+li .checkbox.checked {
+    background: #B692C2;
+}
+
+li .checkbox::after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #fff;
+    display: block;
+    transform: scale(0);
+    transition: transform 0.2s;
+}
+
+li .checkbox.checked::after {
+    transform: scale(1);
+}
+
+li .task-text {
+    flex: 1;
+    margin-right: 10px;
+}
+
+li .priority {
+    padding: 5px 10px;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    text-transform: capitalize;
+    width: 80px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+li .priority.low {
+    background: #E3A5C7;
+}
+
+li .priority.medium {
+    background: #B692C2;
+}
+
+li .priority.high {
+    background: #694F8E;
+}
+
+li .actions button {
+    background: #4a306e;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background 0.3s;
+}
+
+li .actions button:hover {
+    background: #331e51;
+}
+
+
+
+
+
+
+
+
+
+
+
