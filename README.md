@@ -1,6 +1,6 @@
 # To-Do List Application
 
-A simple and elegant To-Do List application built with HTML, CSS, and JavaScript. This app allows you to manage tasks and subtasks, with features including task prioritization, completion status, and drag-and-drop functionality.
+A simple and elegant To-Do List application built with HTML, CSS, and JavaScript. This app allows you to manage tasks, with features including task prioritization, completion status, and drag-and-drop functionality.
 
 # Features
 
